@@ -3,8 +3,7 @@
 
 ## Links
 
-* [Figma](https://www.figma.com/design/CpZLJTXnB1XgHNkWHqClqI/YYMM-WDV349-RiveraSonoely?node-id=0-1&node-type=canvas&t=yU3LikSxa0rmbQSX-0)
-* [Style-Tile]()
+* [Figma Prototype & Style Tile](https://www.figma.com/design/CpZLJTXnB1XgHNkWHqClqI/YYMM-WDV349-RiveraSonoely?node-id=0-1&node-type=canvas&t=yU3LikSxa0rmbQSX-0)
 
 # Log
 
