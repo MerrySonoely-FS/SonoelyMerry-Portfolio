@@ -10,12 +10,16 @@ const Header = () => {
       </div>
       <nav>
         <ul className="nav-links">
+          <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/projects">Projects</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
         </ul>
       </nav>
       <div className="social-media">
-        <a href="https://github.com/RiveraSonoely-FS" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://github.com/RiveraSonoely-FS" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-github"></i> GitHub
+        </a>
       </div>
     </header>
   );
