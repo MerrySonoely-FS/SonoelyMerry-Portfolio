@@ -67,3 +67,26 @@ Refine Responsive Layouts: I plan to fine-tune the CSS Grid layout when I add mo
 Performance Improvements: I will focus on optimizing the website’s performance, especially for mobile users, by compressing images and cleaning up excess code to improve load times.
 Content Development: Start drafting more content for the About Me and Projects pages, focusing on clear messaging and attractive design.
 Self-Reflection: Moving forward, I want to stay mindful of not only how the website looks but how well it functions. I know that the details will make all the difference in delivering a seamless experience. Balancing between design and functionality will be crucial, especially as I start working on the content-heavy pages.
+
+## Week 3
+
+⚙️ **Overview - What I worked on this past week**:
+This week, I focused on improving the foundation of my project by diving into UX/UI principles and Design Theory. I researched key design principles to better understand how to create user-centered, intuitive interfaces. Additionally, I worked on adding a Contact Page to my portfolio, which involved integrating a form and handling submissions through EmailJS.
+
+I also took the time to assess feedback from Week 2, which allowed me to improve the structure and user flow of my portfolio. Lastly, I spent time on planning key elements using GitHub. I documented components, models, state, and routes using GitHub Issues, following a structured approach to outline what needs to be developed in future iterations of the app.
+
+🌵 **Challenges - What problems did I have & how I'm addressing them**:
+One of the main challenges I faced was ensuring that the Contact Page form worked seamlessly with EmailJS for email submissions. At first, the integration with EmailJS was tricky, and I encountered issues with the form data not being sent correctly. To address this, I carefully reviewed the API documentation, checked the keys I was using, and tested the integration thoroughly. I also ran some debugging in the browser console to ensure everything was linked properly.
+
+Additionally, designing with UX/UI principles was a bit overwhelming at times, especially understanding the best practices for mobile-first design and accessibility. To overcome this, I broke down the theory into smaller chunks, starting with basic principles and applying them to my current work. I also consulted additional resources to clarify concepts I wasn’t familiar with.
+
+🏆 **Accomplishments - What is something I "leveled up" on this week**:
+This week, I leveled up on planning and documentation. I successfully utilized GitHub Issues to outline key components, models, state, and routes for my project. This process helped me see the bigger picture for the app and provided a clear roadmap for future development. I also feel more confident with UX/UI design principles, which I applied while refining the layout and functionality of the Contact Page and assessing overall site design.
+
+🔮 **Next Steps - What I plan to prioritize and do next**:
+Next week, I plan to:
+
+Refine the Contact Page by adding validation feedback and improving the user experience. I also want to test the form submission thoroughly and ensure it's working flawlessly.
+Dive deeper into styling and improving the overall UX/UI of the portfolio site. I plan to focus on mobile responsiveness and ensuring the design works well across devices.
+Continue expanding my documentation in GitHub, especially focusing on breaking down the routes and models in more detail, to ensure I have a clear plan for the app’s backend and frontend interactions.
+Review and incorporate user feedback from my peers and mentors to improve the overall usability and design of my portfolio.
