@@ -1,12 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './css/Header.css';
+import SR from './images/sr.png';
 
-const Header = () => {
+const Header = ({ siteTitle }) => {
   return (
     <header className="header">
       <div className="logo">
-        <h1>Sonoely Rivera</h1>
+        <img src={SR} alt="Logo" className="header-logo" />
       </div>
       <nav>
         <ul className="nav-links">
@@ -17,12 +19,20 @@ const Header = () => {
         </ul>
       </nav>
       <div className="social-media">
-        <a href="https://github.com/RiveraSonoely-FS" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/RiveraSonoely-FS" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile">
           <i className="fab fa-github"></i> GitHub
         </a>
       </div>
     </header>
   );
+};
+
+Header.propTypes = {
+  siteTitle: PropTypes.string.isRequired,
+};
+
+Header.defaultProps = {
+  siteTitle: 'My Portfolio',
 };
 
 export default Header;
