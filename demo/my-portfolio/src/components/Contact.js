@@ -9,7 +9,7 @@ const ContactForm = () => {
     message: ''
   });
 
-  const [status, setStatus] = useState('');
+  const [formStatus, setFormStatus] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -20,9 +20,17 @@ const ContactForm = () => {
     }));
   };
 
+  const resetForm = () => {
+    setFormData({
+      name: '',
+      email: '',
+      message: ''
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    
     setIsLoading(true);
     emailjs.sendForm(
       'service_vcdzi6p', 
@@ -31,21 +39,16 @@ const ContactForm = () => {
       'Ap-dxJdPudJfm_JV8'
     )
     .then(
-      (result) => {
-        setStatus('Message sent successfully!');
+      () => {
+        setFormStatus('Message sent successfully!');
+        resetForm();
         setIsLoading(false);
       },
-      (error) => {
-        setStatus('Error sending message, please try again.');
+      () => {
+        setFormStatus('Error sending message, please try again.');
         setIsLoading(false);
       }
     );
-
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    });
   };
 
   return (
@@ -87,7 +90,7 @@ const ContactForm = () => {
                 {isLoading ? 'Sending...' : 'Send Message'}
               </button>
             </form>
-            {status && <p className={status === 'Message sent successfully!' ? 'success' : 'error'}>{status}</p>}
+            {formStatus && <p className={formStatus === 'Message sent successfully!' ? 'success' : 'error'}>{formStatus}</p>}
           </div>
         </div>
       </div>
