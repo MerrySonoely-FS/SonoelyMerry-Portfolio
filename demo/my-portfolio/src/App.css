@@ -1,4 +1,4 @@
-/* Define the color palette */
+/* Color palette */
 :root {
   --beige: #f5f5dc;
   --cream: #fffdd0;
@@ -80,7 +80,6 @@ body {
   }
 }
 
-
 .Home {
   display: flex;
   justify-content: center;
@@ -94,7 +93,6 @@ body {
   box-sizing: border-box;
   opacity: 0.9;
 }
-
 
 h1 {
   font-size: 5rem;

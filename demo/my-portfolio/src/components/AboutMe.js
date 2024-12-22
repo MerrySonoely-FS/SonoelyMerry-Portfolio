@@ -6,7 +6,7 @@ const AboutMe = () => {
   return (
     <section className="about-me">
       <div className="profile-image">
-        <img src={Pic} alt="Sonoely" />
+        <img src={Pic} alt="Sonoely Rivera, a passionate web developer" />
       </div>
       <div className="about-content">
         <div className="bio">
@@ -26,7 +26,7 @@ const AboutMe = () => {
             <li>Teamwork</li>
             <li>Adaptability</li>
             <li>Time Management</li>
-            <li>Responsive Web Designing & Backend Coding</li>
+            <li>Responsive Web Design & Backend Coding</li>
           </ul>
         </div>
       </div>
@@ -35,4 +35,3 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
-
