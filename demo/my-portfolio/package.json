@@ -1,5 +1,6 @@
 {
   "name": "my-portfolio",
+  "homepage": "https://RiveraSonoely-FS.github.io/2412-wdv349-RiveraSonoely",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,18 +13,20 @@
     "emailjs": "^4.0.3",
     "emailjs-com": "^3.2.0",
     "express": "^4.21.2",
+    "ghpages": "^0.0.10",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^5.3.4",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
