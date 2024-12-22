@@ -25,7 +25,7 @@ const Projects = () => {
       <div className="project-list">
         {projects.map((project, index) => (
           <div key={index} className="project-card">
-            <img src={project.image} alt={project.title} />
+            <img src={project.image} alt={`${project.title} Thumbnail`} />
             <h3>{project.title}</h3>
             <p>{project.description}</p>
             <a href={project.link} target="_blank" rel="noopener noreferrer">View on GitHub</a>
