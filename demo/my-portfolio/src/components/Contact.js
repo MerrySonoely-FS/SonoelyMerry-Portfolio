@@ -21,25 +21,27 @@ const ContactForm = () => {
   };
 
   const resetForm = () => {
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    });
+    setFormData({ name: '', email: '', message: '' });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
+    // Basic front-end validation
+    const { name, email, message } = formData;
+    if (!name.trim() || !email.includes('@') || !message.trim()) {
+      setFormStatus('Please fill out all fields correctly.');
+      return;
+    }
+
     setIsLoading(true);
     emailjs.sendForm(
-      'service_vcdzi6p', 
-      'template_r2dap4b', 
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
       e.target,
-      'Ap-dxJdPudJfm_JV8'
+      process.env.REACT_APP_EMAILJS_USER_ID
     )
-    .then(
-      () => {
+    .then(() => {
         setFormStatus('Message sent successfully!');
         resetForm();
         setIsLoading(false);
@@ -68,6 +70,7 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
+                aria-label="Sender Name"
               />
               <label htmlFor="email">Email</label>
               <input
@@ -77,6 +80,7 @@ const ContactForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
+                aria-label="Email"
               />
               <label htmlFor="message">Message</label>
               <textarea
@@ -85,12 +89,17 @@ const ContactForm = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
+                aria-label="Message"
               ></textarea>
               <button type="submit" disabled={isLoading}>
                 {isLoading ? 'Sending...' : 'Send Message'}
               </button>
             </form>
-            {formStatus && <p className={formStatus === 'Message sent successfully!' ? 'success' : 'error'}>{formStatus}</p>}
+            {formStatus && (
+              <p className={formStatus.includes('successfully') ? 'success' : 'error'}>
+                {formStatus}
+              </p>
+            )}
           </div>
         </div>
       </div>
