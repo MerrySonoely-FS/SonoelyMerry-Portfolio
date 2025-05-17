@@ -113,7 +113,7 @@ Review and incorporate user feedback from my peers and mentors to improve the ov
 ## Week 4
 
 ⚙️ **Overview - What I worked on this past week**:
-This week, I focused on improving my React app by integrating best practices like ESLint, PropTypes, and ModuleCSS. I also explored Heroku deployment, setting up staging and production environments, and creating a basic Node.js API under the /api folder. Additionally, I started automating deployments using GitHub Actions.
+This week, I focused on improving my React app by integrating best practices like ESLint, PropTypes, and ModuleCSS. I also explored GH Pages deployment, setting up staging and production environments, and creating a basic Node.js API under the /api folder. Additionally, I started automating deployments using GitHub Actions.
 
 🌵 **Challenges - What problems did I have & how I'm addressing them**:
 
@@ -127,7 +127,7 @@ Created a basic Node.js API and linked it to the React app.
 
 🔮 **Next Steps - What I plan to prioritize and do next**:
 
-Complete the Heroku deployment process and test both staging and production servers.
+Complete the GH Pages deployment process and test both staging and production servers.
 Finalize the Node.js API for handling form submissions and data.
 Continue improving UI components and write tests using Jest and React Testing Library.
 Document the development process in GitHub Issues and improve project workflow.

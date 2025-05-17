@@ -26,10 +26,8 @@
    - **ModuleCSS** allows CSS to be scoped to individual components, preventing style conflicts across the app. Each CSS file is imported directly into the component, ensuring that styles do not leak into other parts of the application.
    - It also improves maintainability because styles are tied directly to their respective components, making it easier to manage and update.
 
-### 5. **Deployment on Heroku**
-   - I explored **Heroku's** deployment process for React applications, which involves deploying via Git. The app is hosted in a **Node.js environment** on Heroku, and the build process is managed using **Heroku’s buildpacks**.
-   - Heroku also provides **free tier** services for students through the GitHub Student Developer Pack, which I used to gain free deployment credits for testing.
-   - For future deployment, I will explore using **continuous deployment** (CD) services like **GitHub Actions** to automatically deploy new commits to Heroku.
+### 5. **Deployment on GH PAGES**
+   - I explored **Git Hub Page's** deployment process for React applications, which involves deploying via GitHub. The app is hosted in a **Node.js environment** on GitHub, and the build process is managed using **Git Hub Page’s buildpacks**.
 
 ---
 
