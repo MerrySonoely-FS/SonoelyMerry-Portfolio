@@ -27,7 +27,6 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Basic front-end validation
     const { name, email, message } = formData;
     if (!name.trim() || !email.includes('@') || !message.trim()) {
       setFormStatus('Please fill out all fields correctly.');
