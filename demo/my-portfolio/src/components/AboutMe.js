@@ -6,12 +6,12 @@ const AboutMe = () => {
   return (
     <section className="about-me">
       <div className="profile-image">
-        <img src={Pic} alt="Sonoely Rivera, a passionate web developer" />
+        <img src={Pic} alt="Sonoely Merry, a passionate web developer" />
       </div>
       <div className="about-content">
         <div className="bio">
           <h2>About Me</h2>
-          <p>Hi, I'm Sonoely Rivera, a passionate web development student specializing in front-end development using React. I love solving problems and building dynamic, user-friendly applications.</p>
+          <p>Hi, I'm Sonoely Merry, a passionate web development student specializing in front-end development using React. I love solving problems and building dynamic, user-friendly applications.</p>
         </div>
         <div className="skills">
           <h3>Skills</h3>
