@@ -1,8 +1,6 @@
 To start the application - type 'npm start' in terminal.
 Visit http://localhost:3000/ to view my website.
 
-# YYMM-WDV349-RiveraSonoely
-
 🟩 Week 1: Integrate EmailJS for Contact Functionality
 
 Goal: Enable form-based email sending directly from the portfolio using EmailJS.
@@ -55,4 +53,3 @@ Tasks:
  Make sure all pages are mobile responsive.
  Audit for accessibility (contrast ratios, ARIA labels).
  Polish navbar, footer, and any reusable components.
- Review performance (optimize images, remove unused code).
