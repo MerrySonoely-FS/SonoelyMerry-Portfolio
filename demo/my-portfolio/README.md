@@ -23,19 +23,6 @@ A modern, responsive portfolio website built to showcase my skills, projects, an
 
 ---
 
-## 🛠 Tech Stack
-
-| Layer         | Technologies                             |
-|---------------|-------------------------------------------|
-| **Frontend**  | React, HTML5, CSS3 (CSS Modules)          |
-| **Backend**   | Node.js (for server-side logic/APIs)      |
-| **Email**     | EmailJS (client-side form submissions)    |
-| **Visuals**   | Unsplash API (dynamic images)             |
-| **Deployment**| Heroku, GitHub Actions (CI/CD)            |
-| **Code Quality** | ESLint, PropTypes, Prettier             |
-
----
-
 ## 📦 Getting Started
 
 ### 1. Clone the repository
