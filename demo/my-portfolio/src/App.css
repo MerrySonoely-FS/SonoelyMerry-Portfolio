@@ -25,7 +25,7 @@ body {
   margin: 0;
   padding: 0;
   color: var(--olive);
-  background-color: var(--cream);
+  background-color: #f5f5f5;
   transition: background-image 0.5s ease-in-out;
   min-height: 100vh;
 }
