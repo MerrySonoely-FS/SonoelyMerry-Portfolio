@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom';
 import Header from './components/Header.js';
 import AboutMe from './components/AboutMe.js';
 import Projects from './components/Projects.js';
@@ -9,27 +9,41 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Home() {
+  return (
+    <div className="content-section bg-light rounded p-4 shadow-lg text-center" style={{ opacity: 0.9 }}>
+      <h1 className="mb-3">Welcome to My Portfolio!</h1>
+      <p className="lead">Explore my work, learn more about me, and check out my projects.</p>
+      <button className="btn btn-success mt-3">Sample Button</button>
+    </div>
+  );
+}
+
+function AppContent() {
   const [imageUrl, setImageUrl] = useState('');
+  const location = useLocation();
+
+  const fetchBackground = () => {
+    fetch(`https://api.unsplash.com/photos/random?query=background&client_id=${process.env.REACT_APP_UNSPLASH_ACCESS_KEY}`)
+      .then(res => res.json())
+      .then(data => {
+        if (data?.urls?.regular) {
+          console.log('Fetched image:', data.urls.regular);
+          setImageUrl(data.urls.regular);
+        }
+      })
+      .catch(err => {
+        console.error('Image fetch failed:', err);
+        setImageUrl('https://via.placeholder.com/1920x1080');
+      });
+  };
 
   useEffect(() => {
-    const cachedImage = localStorage.getItem('unsplash-image');
-    if (cachedImage) {
-      setImageUrl(cachedImage);
-    } else {
-      fetch(`https://api.unsplash.com/photos/random?query=background&client_id=${process.env.REACT_APP_UNSPLASH_ACCESS_KEY}`)
-        .then(res => res.json())
-        .then(data => {
-          if (data?.urls?.regular) {
-            setImageUrl(data.urls.regular);
-            localStorage.setItem('unsplash-image', data.urls.regular);
-          }
-        })
-        .catch(err => {
-          console.error('Image fetch failed:', err);
-          setImageUrl('https://via.placeholder.com/1920x1080');
-        });
-    }
+    fetchBackground();
   }, []);
+
+  useEffect(() => {
+    fetchBackground();
+  }, [location]);
 
   useEffect(() => {
     if (imageUrl) {
@@ -41,21 +55,29 @@ function Home() {
     }
   }, [imageUrl]);
 
-  return (
-    <div className="content-section bg-light rounded p-4 shadow-lg text-center" style={{ opacity: 0.9 }}>
-      <h1 className="mb-3">Welcome to My Portfolio!</h1>
-      <p className="lead">Explore my work, learn more about me, and check out my projects.</p>
+  useEffect(() => {
+    const handleButtonClick = (e) => {
+      if (e.target.tagName === 'BUTTON') {
+        fetchBackground();
+      }
+    };
 
-      {/* 🔁 Refresh Background Button */}
-      <button
-        className="btn btn-success mt-3"
-        onClick={() => {
-          localStorage.removeItem('unsplash-image');
-          window.location.reload();
-        }}
-      >
-        Refresh Background
-      </button>
+    document.addEventListener('click', handleButtonClick);
+    return () => document.removeEventListener('click', handleButtonClick);
+  }, []);
+
+  return (
+    <div className="main-wrapper">
+      <Header />
+      <div className="container-fluid p-0">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={AboutMe} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/contact" component={Contact} />
+        </Switch>
+      </div>
+      <Footer />
     </div>
   );
 }
@@ -63,18 +85,7 @@ function Home() {
 function App() {
   return (
     <Router>
-      <div className="main-wrapper">
-        <Header />
-        <div className="container mt-5">
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={AboutMe} />
-            <Route path="/projects" component={Projects} />
-            <Route path="/contact" component={Contact} />
-          </Switch>
-        </div>
-        <Footer />
-      </div>
+      <AppContent />
     </Router>
   );
 }
