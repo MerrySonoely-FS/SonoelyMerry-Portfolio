@@ -3,6 +3,7 @@ import './css/Projects.css';
 import memoryLane from './images/memoryLane.png';
 import gitHub from './images/github-logo.webp';
 import spotify from './images/spotify.png';
+import selenium from './images/selenium.jpeg';
 
 const Projects = () => {
   const projects = [
@@ -23,6 +24,12 @@ const Projects = () => {
       description: 'A music search app that pulls related musicians/groups based on searchs - using Spotify API.',
       image: spotify,
       link: 'https://github.com/RiveraSonoely-FS/PP3_SpotifyAPI'
+    },
+    {
+      title: 'Selenium Testing',
+      description: 'This Selenium testing project automates the validation of key functionalities in a web application.',
+      image: selenium,
+      link: 'https://github.com/RiveraSonoely-FS/2.3-SeleniumTesting'
     }
   ];
 
