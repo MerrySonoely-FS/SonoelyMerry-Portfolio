@@ -1,5 +1,4 @@
 /* Color palette */
-/* Color palette */
 :root {
   --beige: #f5f5dc;
   --cream: #fffdd0;
@@ -48,6 +47,12 @@ body {
   font-size: 3rem;
   font-weight: bold;
   color: var(--shades-of-green-dark);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.content-section h1:hover {
+  color: var(--young-greenery); /* Hover effect color */
+  transform: scale(1.05);
 }
 
 .content-section p {
@@ -64,6 +69,7 @@ body {
     font-size: 1rem;
   }
 }
+
 .project-list {
   display: flex;
   flex-wrap: wrap;
