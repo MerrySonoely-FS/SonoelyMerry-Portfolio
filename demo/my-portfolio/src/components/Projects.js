@@ -2,6 +2,8 @@ import React from 'react';
 import './css/Projects.css';
 import memoryLane from './images/memoryLane.png';
 import gitHub from './images/github-logo.webp';
+import spotify from './images/spotify.png';
+import selenium from './images/selenium.jpeg';
 
 const Projects = () => {
   const projects = [
@@ -13,9 +15,21 @@ const Projects = () => {
     },
     {
       title: 'Memory Lane',
-      description: 'A web blog reflecting on my academic career',
+      description: 'My web blog reflecting on my academic career',
       image: memoryLane,
       link: 'https://github.com/RiveraSonoely-FS/memory-lane'
+    },
+    {
+      title: 'Spotify-API',
+      description: 'A music search app that pulls related musicians/groups based on searchs - using Spotify API.',
+      image: spotify,
+      link: 'https://github.com/RiveraSonoely-FS/PP3_SpotifyAPI'
+    },
+    {
+      title: 'Selenium Testing',
+      description: 'This Selenium testing project automates the validation of key functionalities in a web application.',
+      image: selenium,
+      link: 'https://github.com/RiveraSonoely-FS/2.3-SeleniumTesting'
     }
   ];
 
