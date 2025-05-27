@@ -23,19 +23,26 @@ function AppContent() {
   const location = useLocation();
 
   const fetchBackground = () => {
-    fetch(`https://api.unsplash.com/photos/random?query=background&client_id=${process.env.REACT_APP_UNSPLASH_ACCESS_KEY}`)
-      .then(res => res.json())
-      .then(data => {
+    fetch('https://api.unsplash.com/photos/random?query=background&orientation=landscape', {
+      headers: {
+        Authorization: `Client-ID ${process.env.REACT_APP_UNSPLASH_ACCESS_KEY}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
         if (data?.urls?.regular) {
           console.log('Fetched image:', data.urls.regular);
           setImageUrl(data.urls.regular);
+        } else {
+          console.warn('No image found, using fallback.');
+          setImageUrl('https://via.placeholder.com/1920x1080');
         }
       })
-      .catch(err => {
+      .catch((err) => {
         console.error('Image fetch failed:', err);
         setImageUrl('https://via.placeholder.com/1920x1080');
       });
-  };
+  };  
 
   useEffect(() => {
     fetchBackground();
