@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch, useLocation } from 'react-router-dom';
 import Header from './components/Header.js';
 import AboutMe from './components/AboutMe.js';
 import Projects from './components/Projects.js';
@@ -7,13 +7,11 @@ import Contact from './components/Contact.js';
 import Footer from './components/Footer.js';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 function Home() {
   return (
     <div className="content-section bg-light rounded p-4 shadow-lg text-center" style={{ opacity: 0.9 }}>
       <h1 className="mb-3">Welcome to My Portfolio!</h1>
       <p className="lead">Explore my work, learn more about me, and check out my projects.</p>
-      <button className="btn btn-success mt-3">Sample Button</button>
     </div>
   );
 }
@@ -23,7 +21,7 @@ function AppContent() {
   const location = useLocation();
 
   const fetchBackground = () => {
-    fetch('https://api.unsplash.com/photos/random?query=background&orientation=landscape', {
+    fetch('https://api.unsplash.com/photos/random?query=background', {
       headers: {
         Authorization: `Client-ID ${process.env.REACT_APP_UNSPLASH_ACCESS_KEY}`,
       },
@@ -61,17 +59,6 @@ function AppContent() {
       document.body.style.backgroundAttachment = 'fixed';
     }
   }, [imageUrl]);
-
-  useEffect(() => {
-    const handleButtonClick = (e) => {
-      if (e.target.tagName === 'BUTTON') {
-        fetchBackground();
-      }
-    };
-
-    document.addEventListener('click', handleButtonClick);
-    return () => document.removeEventListener('click', handleButtonClick);
-  }, []);
 
   return (
     <div className="main-wrapper">
