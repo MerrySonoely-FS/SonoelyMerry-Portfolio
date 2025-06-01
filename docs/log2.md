@@ -1,11 +1,8 @@
-⚙️ Overview - Week 1 - 05-11-25
-This week, I focused on integrating EmailJS into my React-based contact form. I updated the form to securely send messages without revealing my email address. I also set up a .env file to manage sensitive credentials and practiced best practices for asynchronous API calls and UI feedback.
+⚙️ Overview – Week 2 - 05-16-25
+This past week, I focused on refining the front-end components of my portfolio site, particularly the Projects section. I implemented responsive card layouts using Flexbox, enhanced the UI with hover effects, and integrated image assets and GitHub links. I also cleaned up the color palette using CSS variables to ensure consistency and maintainability across the site.
 
-🌵 Challenges
-Setting up the .env file correctly took trial and error; values weren’t being read properly due to naming syntax (REACT_APP_ prefix).
-EmailJS error handling wasn’t consistent across browsers. I had to improve feedback by using loading states and conditional rendering for messages.
-Encountered issues with Git (couldn't switch branches due to uncommitted changes), which delayed integration work.
-How I addressed them:
+🌵 Challenges – What problems did I have & how I'm addressing them
+One challenge I faced was getting the hover effects to feel smooth and visually appealing without disrupting the layout, especially on mobile. At first, my transitions were either too subtle or too abrupt. To address this, I experimented with different CSS transitions and timing functions. I also struggled briefly with aligning elements inside the project cards but resolved it by revisiting my Flexbox setup and setting consistent padding/margins.
 
 Carefully reviewed the EmailJS docs and React environment variable handling.
 Implemented a formStatus state and added isLoading indicators for better UX.
@@ -47,3 +44,14 @@ I gained a much stronger understanding of working with environment variables in 
 🔮 Next Steps — 
 What I plan to prioritize and do next
 Next, I’ll shift focus to enhancing the visual experience of the site by integrating the Unsplash API to dynamically load background images. This will involve setting up API calls using fetch or Axios, managing the image state in layout components, and ensuring a clean visual transition between routes. I'll also implement logic to refresh the background with every route change using React Router's useLocation, and apply visual overlays to improve text readability.
+=======
+🏆 Accomplishments – What is something I "leveled up" on this week
+This week, I leveled up my CSS styling and UI design skills, especially in writing scalable and theme-consistent styles using :root variables. I also improved in debugging layout issues across screen sizes, which has made me more confident working with responsive design. Additionally, my use of semantic HTML and accessible link behaviors showed clear improvement.
+
+🔮 Next Steps – What I plan to prioritize and do next
+Review and refine the color scheme, fonts, and spacing using Bootstrap utilities and custom CSS for consistency.
+Add transitions, animations, and subtle hover effects to improve interactivity.
+Ensure the site is fully mobile responsive, checking layouts on various screen sizes.
+Conduct a basic accessibility audit – including color contrast checks and ARIA labels where appropriate.
+Polish shared elements like the navbar, footer, and other reusable components for a more professional finish.
+
