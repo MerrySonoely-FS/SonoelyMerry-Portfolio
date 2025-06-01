@@ -382,3 +382,72 @@ h1, h2, h3, p {
   position: absolute;
   left: 0;
 }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 15px 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: var(--shades-of-olive-dark);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--orange);
+}
+
+.social-media a {
+  color: var(--orange);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.social-media i {
+  font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-media {
+    margin-top: 10px;
+  }
+}
+.footer {
+  background-color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95rem;
+  color: var(--shades-of-olive-dark);
+  border-top: 1px solid var(--pale-brown);
+  backdrop-filter: blur(5px);
+}
