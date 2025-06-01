@@ -4,18 +4,8 @@ This past week, I focused on refining the front-end components of my portfolio s
 🌵 Challenges – What problems did I have & how I'm addressing them
 One challenge I faced was getting the hover effects to feel smooth and visually appealing without disrupting the layout, especially on mobile. At first, my transitions were either too subtle or too abrupt. To address this, I experimented with different CSS transitions and timing functions. I also struggled briefly with aligning elements inside the project cards but resolved it by revisiting my Flexbox setup and setting consistent padding/margins.
 
-Carefully reviewed the EmailJS docs and React environment variable handling.
-Implemented a formStatus state and added isLoading indicators for better UX.
-Resolved Git issues by committing/stashing before switching to the dev branch.
-🏆 Accomplishments
-Integrated EmailJS successfully, allowing users to send messages directly from the contact form.
-Learned more about handling sensitive data in React via .env files.
-Gained experience using useState, emailjs-com, and form event handling more efficiently.
-Improved my comfort with Git branching and troubleshooting version control conflicts.
-🔮 Next Steps
-Begin work on Unsplash API integration for Week 2: fetch and display a dynamic background image.
-Research best practices for background image accessibility and responsiveness.
-Ensure the background image enhances visual impact without disrupting page readability.
+🏆 Accomplishments – What is something I "leveled up" on this week
+This week, I leveled up my CSS styling and UI design skills, especially in writing scalable and theme-consistent styles using :root variables. I also improved in debugging layout issues across screen sizes, which has made me more confident working with responsive design. Additionally, my use of semantic HTML and accessible link behaviors showed clear improvement.
 
 ## Week 2 
 ⚙️ Overview — 05-20-25
@@ -48,6 +38,7 @@ Next, I’ll shift focus to enhancing the visual experience of the site by integ
 🏆 Accomplishments – What is something I "leveled up" on this week
 This week, I leveled up my CSS styling and UI design skills, especially in writing scalable and theme-consistent styles using :root variables. I also improved in debugging layout issues across screen sizes, which has made me more confident working with responsive design. Additionally, my use of semantic HTML and accessible link behaviors showed clear improvement.
 
+=======
 🔮 Next Steps – What I plan to prioritize and do next
 Review and refine the color scheme, fonts, and spacing using Bootstrap utilities and custom CSS for consistency.
 Add transitions, animations, and subtle hover effects to improve interactivity.
@@ -55,3 +46,5 @@ Ensure the site is fully mobile responsive, checking layouts on various screen s
 Conduct a basic accessibility audit – including color contrast checks and ARIA labels where appropriate.
 Polish shared elements like the navbar, footer, and other reusable components for a more professional finish.
 
+=======
+Polish shared elements like the navbar, footer, and other reusable components for a more professional finish.

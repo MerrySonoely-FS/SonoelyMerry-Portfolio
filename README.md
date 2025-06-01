@@ -1,4 +1,8 @@
+
 # 🎨 Personal Portfolio – Rivera Sonoely
+=======
+To start the application - type 'npm start' in terminal.
+Visit http://localhost:3000/ to view my website.
 
 🟩 Week 1: Integrate EmailJS for Contact Functionality
 
@@ -52,11 +56,9 @@ Tasks:
  Make sure all pages are mobile responsive.
  Audit for accessibility (contrast ratios, ARIA labels).
  Polish navbar, footer, and any reusable components.
+
  Review performance (optimize images, remove unused code).
-=======
-# YYMM-WDV349-MerrySonoely
-standby for update
-=======
+
 ![React](https://img.shields.io/badge/React-2025-blue?logo=react&logoColor=white)
 ![CSS](https://img.shields.io/badge/Styled_with-CSS-blueviolet)
 ![Status](https://img.shields.io/badge/Status-Deployed-success)
@@ -123,3 +125,4 @@ Planned a project showcase section to highlight work
  Share portfolio for feedback
  Add dark mode toggle
  Write a development blog or case study
+=======
