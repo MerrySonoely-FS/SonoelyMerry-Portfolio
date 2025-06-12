@@ -73,7 +73,6 @@ function AppContent() {
       </div>
       <Footer />
     </div>
-
   );  
 }
 
