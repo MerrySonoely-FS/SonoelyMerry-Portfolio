@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/SonoelyMerry_Portfolio/static/css/main.87520a34.css",
-    "main.js": "/SonoelyMerry_Portfolio/static/js/main.cf022adf.js",
+    "main.css": "/SonoelyMerry_Portfolio/static/css/main.ae11a505.css",
+    "main.js": "/SonoelyMerry_Portfolio/static/js/main.2adc990e.js",
     "static/js/453.acca0757.chunk.js": "/SonoelyMerry_Portfolio/static/js/453.acca0757.chunk.js",
     "static/media/memoryLane.png": "/SonoelyMerry_Portfolio/static/media/memoryLane.eaa2c38eb4ff18c8bb3a.png",
+    "static/media/SM.png": "/SonoelyMerry_Portfolio/static/media/SM.4816a4c4bfc635091155.png",
     "static/media/profilePic.jpeg": "/SonoelyMerry_Portfolio/static/media/profilePic.7ccbd9ef6cb92c3cf79f.jpeg",
     "static/media/selenium.jpeg": "/SonoelyMerry_Portfolio/static/media/selenium.9f07a119d1a33966fe23.jpeg",
     "static/media/spotify.png": "/SonoelyMerry_Portfolio/static/media/spotify.f967714541540c696d72.png",
     "static/media/github-logo.webp": "/SonoelyMerry_Portfolio/static/media/github-logo.f6b1ef25d34145d939b6.webp",
     "index.html": "/SonoelyMerry_Portfolio/index.html",
-    "main.87520a34.css.map": "/SonoelyMerry_Portfolio/static/css/main.87520a34.css.map",
-    "main.cf022adf.js.map": "/SonoelyMerry_Portfolio/static/js/main.cf022adf.js.map",
+    "main.ae11a505.css.map": "/SonoelyMerry_Portfolio/static/css/main.ae11a505.css.map",
+    "main.2adc990e.js.map": "/SonoelyMerry_Portfolio/static/js/main.2adc990e.js.map",
     "453.acca0757.chunk.js.map": "/SonoelyMerry_Portfolio/static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.87520a34.css",
-    "static/js/main.cf022adf.js"
+    "static/css/main.ae11a505.css",
+    "static/js/main.2adc990e.js"
   ]
 }
