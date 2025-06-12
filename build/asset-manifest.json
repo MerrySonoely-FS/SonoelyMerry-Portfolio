@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/SonoelyMerry_Portfolio/static/css/main.ae11a505.css",
-    "main.js": "/SonoelyMerry_Portfolio/static/js/main.2adc990e.js",
+    "main.js": "/SonoelyMerry_Portfolio/static/js/main.bbe74a15.js",
     "static/js/453.acca0757.chunk.js": "/SonoelyMerry_Portfolio/static/js/453.acca0757.chunk.js",
     "static/media/memoryLane.png": "/SonoelyMerry_Portfolio/static/media/memoryLane.eaa2c38eb4ff18c8bb3a.png",
     "static/media/SM.png": "/SonoelyMerry_Portfolio/static/media/SM.4816a4c4bfc635091155.png",
@@ -11,11 +11,11 @@
     "static/media/github-logo.webp": "/SonoelyMerry_Portfolio/static/media/github-logo.f6b1ef25d34145d939b6.webp",
     "index.html": "/SonoelyMerry_Portfolio/index.html",
     "main.ae11a505.css.map": "/SonoelyMerry_Portfolio/static/css/main.ae11a505.css.map",
-    "main.2adc990e.js.map": "/SonoelyMerry_Portfolio/static/js/main.2adc990e.js.map",
+    "main.bbe74a15.js.map": "/SonoelyMerry_Portfolio/static/js/main.bbe74a15.js.map",
     "453.acca0757.chunk.js.map": "/SonoelyMerry_Portfolio/static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ae11a505.css",
-    "static/js/main.2adc990e.js"
+    "static/js/main.bbe74a15.js"
   ]
 }
