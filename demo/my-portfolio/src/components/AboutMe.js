@@ -12,7 +12,7 @@ const AboutMe = () => {
       <div className="bio-container">
         <h2>About Me</h2>
         <p>
-          Hi, I'm Sonoely Merry, a passionate web development student specializing in front-end development using React. I love solving problems and building dynamic, user-friendly applications.
+          Hi, I'm Sonoely Merry, a passionate web developer specializing in front-end development using React & JavaScript. I love solving problems and building dynamic, user-friendly applications.
         </p>
       </div>
 
