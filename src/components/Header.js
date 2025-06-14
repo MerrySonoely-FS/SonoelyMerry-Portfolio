@@ -22,6 +22,9 @@ const Header = ({ siteTitle }) => {
         <a href="https://github.com/MerrySonoely-FS" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile">
           <i className="fab fa-github"></i> GitHub
         </a>
+        <a href="https://www.linkedin.com/in/sonoely-merry-13341136b/" target="_blank" rel="noopener noreferrer" aria-label="Visit my Linked-In profile">
+          <i className="fab fa-github"></i> LinkedIn
+        </a>
       </div>
     </header>
   );
