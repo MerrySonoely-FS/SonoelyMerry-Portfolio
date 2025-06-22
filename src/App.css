@@ -1,4 +1,4 @@
-/* App.css */
+ /* App.css */
 
 /* Color palette */
 :root {
@@ -26,6 +26,7 @@ body {
   color: var(--olive);
   background-color: #f5f5f5;
   transition: background-image 0.5s ease-in-out;
+  height: 100%;
 }
 
 .main-wrapper {
@@ -46,8 +47,7 @@ body {
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 15px;
   max-width: 90%;
-  margin: 0 auto;
-  padding-bottom: 40px; /* instead of margin-bottom */
+  margin: 0 auto 40px auto;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
@@ -79,12 +79,60 @@ body {
   }
 }
 
-.card-body {
-  flex-grow: 1;
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
 }
 
-.card-footer {
-  margin-top: auto;
+.project-card {
+  background-color: var(--white-with-cyan);
+  border: 1px solid var(--pale-brown);
+  border-radius: 12px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  background-color: var(--shades-of-green-light);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-card h3 {
+  margin-top: 15px;
+  font-size: 1.3em;
+  color: var(--shades-of-green-dark);
+}
+
+.project-card p {
+  font-size: 1em;
+  color: var(--shades-of-olive-dark);
+  margin: 10px 0;
+}
+
+.project-card a {
+  color: var(--orange);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+  color: var(--shades-of-orange-dark);
 }
 
 .btn-success {
@@ -123,7 +171,6 @@ a:hover {
   border-radius: 10px;
   border: 2px solid var(--wedding-gamma);
 }
-
 .page-wrapper {
   max-width: 900px;
   margin: 3rem auto;
@@ -177,6 +224,7 @@ a:hover {
   color: var(--shades-of-olive-dark);
 }
 
+
 @media (max-width: 768px) {
   .page-wrapper {
     max-width: 90%;
@@ -187,7 +235,6 @@ a:hover {
     columns: 1;
   }
 }
-
 .about-me {
   display: flex;
   flex-direction: column;
@@ -210,6 +257,7 @@ a:hover {
   transition: transform 0.3s ease;
 }
 
+
 .profile-image img:hover {
   transform: scale(1.05);
 }
@@ -224,7 +272,7 @@ a:hover {
 }
 
 .about-content h2 {
-  margin-top: 10px;
+  margin-top: 10px;    
   margin-bottom: 20px;
   font-size: 2rem;
   font-weight: 700;
@@ -254,10 +302,20 @@ a:hover {
   padding-left: 15px;
   transition: color 0.25s ease;
 }
-
 h1, h2, h3, p {
   margin: 0;
   padding: 0;
+}
+.bio-container,
+.skills-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: rgba(189, 235, 245, 0.85);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .bio-container,
@@ -268,7 +326,7 @@ h1, h2, h3, p {
   padding: 30px;
   border-radius: 12px;
   background-color: rgba(255, 255, 255, 0.85);
-  border: 2px solid var(--orange);
+  border: 2px solid var(--orange); /* Orange border */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
@@ -280,9 +338,21 @@ h1, h2, h3, p {
   background-color: rgba(255, 255, 255, 0.95);
 }
 
+
 .bio-container {
   background-color: var(--shades-of-green-light);
+ .bio-container,
+.skills-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: rgba(189, 235, 245, 0.85);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-color: var(--shades-of-orange-dark);
+}
 }
 
 .skills-container {
@@ -310,7 +380,6 @@ h1, h2, h3, p {
   position: absolute;
   left: 0;
 }
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -355,7 +424,6 @@ h1, h2, h3, p {
 .social-media i {
   font-size: 1.2rem;
 }
-
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
@@ -373,7 +441,6 @@ h1, h2, h3, p {
     margin-top: 10px;
   }
 }
-
 .footer {
   background-color: #223727;
   text-align: center;
@@ -382,23 +449,14 @@ h1, h2, h3, p {
   color: white;
   border-top: 1px solid var(--pale-brown);
   backdrop-filter: blur(5px);
-  margin-top: auto;
+}
+
+.content-wrapper {
+  flex: 1 0 auto
 }
 
 .main-wrapper {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
-.content-wrapper {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 60px;
 }

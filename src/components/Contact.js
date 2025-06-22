@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './css/Contact.css';
 
@@ -11,10 +11,7 @@ const ContactForm = () => {
 
   const [formStatus, setFormStatus] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    emailjs.init(process.env.REACT_APP_EMAILJS_USER_ID);
-  }, []);
+  const formRef = useRef(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -32,33 +29,40 @@ const ContactForm = () => {
     });
   };
 
+  const validateEmail = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const { from_name, reply_to, message } = formData;
-    if (!from_name.trim() || !reply_to.includes('@') || !message.trim()) {
+
+    if (!from_name.trim() || !validateEmail(reply_to) || !message.trim()) {
       setFormStatus('Please fill out all fields correctly.');
       return;
     }
 
     setIsLoading(true);
 
-    emailjs.sendForm(
-      process.env.REACT_APP_EMAILJS_SERVICE_ID,
-      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-      e.target,
-      process.env.REACT_APP_EMAILJS_USER_ID
-    )
-    .then(() => {
-      setFormStatus('Message sent successfully!');
-      resetForm();
-      setIsLoading(false);
-    })
-    .catch((error) => {
-      console.error('EmailJS error:', error);
-      setFormStatus('Error sending message, please try again.');
-      setIsLoading(false);
-    });
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        process.env.REACT_APP_EMAILJS_USER_ID
+      )
+      .then(() => {
+        setFormStatus('Message sent successfully!');
+        resetForm();
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error('EmailJS error:', error);
+        setFormStatus('Error sending message, please try again.');
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -69,7 +73,7 @@ const ContactForm = () => {
         </div>
         <div className="contact-form-wrapper">
           <div className="contact-form">
-            <form onSubmit={handleSubmit}>
+            <form ref={formRef} onSubmit={handleSubmit} autoComplete="off">
               <label htmlFor="from_name">Name</label>
               <input
                 type="text"
@@ -102,13 +106,25 @@ const ContactForm = () => {
                 aria-label="Message"
               />
 
+              {/* Honeypot spam prevention field */}
+              <input
+                type="text"
+                name="_gotcha"
+                style={{ display: 'none' }}
+                tabIndex="-1"
+                autoComplete="off"
+              />
+
               <button type="submit" disabled={isLoading}>
                 {isLoading ? 'Sending...' : 'Send Message'}
               </button>
             </form>
 
             {formStatus && (
-              <p className={formStatus.includes('successfully') ? 'success' : 'error'}>
+              <p
+                className={formStatus.includes('successfully') ? 'success' : 'error'}
+                aria-live="polite"
+              >
                 {formStatus}
               </p>
             )}
