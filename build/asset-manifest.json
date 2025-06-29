@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/SonoelyMerry-Portfolio/static/css/main.8d72e1b7.css",
+    "main.js": "/SonoelyMerry-Portfolio/static/js/main.f282f9aa.js",
+    "static/js/453.acca0757.chunk.js": "/SonoelyMerry-Portfolio/static/js/453.acca0757.chunk.js",
+    "static/media/memoryLane.png": "/SonoelyMerry-Portfolio/static/media/memoryLane.eaa2c38eb4ff18c8bb3a.png",
+    "static/media/SM.png": "/SonoelyMerry-Portfolio/static/media/SM.4816a4c4bfc635091155.png",
+    "static/media/profilePic.jpeg": "/SonoelyMerry-Portfolio/static/media/profilePic.7ccbd9ef6cb92c3cf79f.jpeg",
+    "static/media/selenium.jpeg": "/SonoelyMerry-Portfolio/static/media/selenium.9f07a119d1a33966fe23.jpeg",
+    "static/media/spotify.png": "/SonoelyMerry-Portfolio/static/media/spotify.f967714541540c696d72.png",
+    "static/media/github-logo.webp": "/SonoelyMerry-Portfolio/static/media/github-logo.f6b1ef25d34145d939b6.webp",
+    "index.html": "/SonoelyMerry-Portfolio/index.html",
+    "main.8d72e1b7.css.map": "/SonoelyMerry-Portfolio/static/css/main.8d72e1b7.css.map",
+    "main.f282f9aa.js.map": "/SonoelyMerry-Portfolio/static/js/main.f282f9aa.js.map",
+    "453.acca0757.chunk.js.map": "/SonoelyMerry-Portfolio/static/js/453.acca0757.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8d72e1b7.css",
+    "static/js/main.f282f9aa.js"
+  ]
+}

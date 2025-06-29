@@ -63,7 +63,7 @@ function AppContent() {
   return (
     <div className="main-wrapper">
       <Header />
-      <div className="container-fluid p-0">
+      <div className="content-wrapper">
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={AboutMe} />
@@ -73,7 +73,7 @@ function AppContent() {
       </div>
       <Footer />
     </div>
-  );
+  );  
 }
 
 function App() {
