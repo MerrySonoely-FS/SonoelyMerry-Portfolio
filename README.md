@@ -1,7 +1,7 @@
 
 # 🎨 Personal Portfolio – Rivera Sonoely
 =======
-To start the application - type 'npm start' in terminal.
+To start the application - type 'npm install' then 'npm start' in terminal.
 Visit http://localhost:3000/ to view my website.
 
 🟩 Week 1: Integrate EmailJS for Contact Functionality
